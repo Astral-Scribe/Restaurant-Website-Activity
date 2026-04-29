@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Gilded Flagon</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./assets/images/plainlogo.png">
+</head>
+<body>
+  <audio src="assets/Candle Irony.mp3" autoplay loop></audio>
+  <nav>
+    <img src="./assets/images/plainlogo.png" alt="The Gilded Flagon logo" class="nav-logo" />
+    <span class="nav-brand">The Gilded Flagon</span>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="booking.html" class="active">Book a Table</a></li>
+    </ul>
+  </nav>
+  <div class="section">
+
+    <div style="text-align:center; margin-bottom:30px;">
+      <h1 style="font-size:1.9rem; margin-bottom:6px;">Reserve Your Seat</h1>
+      <p style="font-style:italic; color:#8b7040; font-size:0.9rem; margin:0;">
+        The Flagon fills fast on quest nights. We recommend booking at least two days ahead.
+      </p>
+    </div>
+
+    <div class="divider">- ✦ - ✦ - ✦ -</div>
+
+    <div class="booking-grid">
+
+      <!-- left: info -->
+      <div class="info">
+
+        <img src="./assets/images/tavernexterior.png" alt="The Gilded Flagon exterior"/>
+
+        <div class="info-item">
+          <strong>Location</strong>
+          14 Old Anvil Road, Crossroads Quarter<br />
+          Auckland, New Zealand
+        </div>
+
+        <div class="info-item">
+          <strong>Phone</strong>
+          (09) 555 0412
+        </div>
+
+        <div class="info-item">
+          <strong>Email</strong>
+          reservations@gildedflagon.nz
+        </div>
+
+        <div class="info-item">
+          <strong>Opening Hours</strong>
+          <table class="hours-table" id="hoursTable">
+            <tr data-day="1"><td>Monday</td><td>Closed</td></tr>
+            <tr data-day="2"><td>Tuesday</td><td>5pm – 10pm</td></tr>
+            <tr data-day="3"><td>Wednesday</td><td>5pm – 10pm</td></tr>
+            <tr data-day="4"><td>Thursday</td><td>5pm – 10pm</td></tr>
+            <tr data-day="5"><td>Friday</td><td>4pm – 11pm</td></tr>
+            <tr data-day="6"><td>Saturday</td><td>12pm – 11pm</td></tr>
+            <tr data-day="0"><td>Sunday</td><td>12pm – 9pm</td></tr>
+          </table>
+        </div>
+
+        <div style="background-color:#120700; border:1px solid #3a1a00; border-radius:3px; padding:14px; margin-top:16px;">
+          <p style="font-family:'Cinzel', serif; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#7a1a1a; margin-bottom:8px;">House Rules</p>
+          <ul style="padding-left:16px; font-size:0.82rem; color:#8b7040; font-style:italic; line-height:2;">
+            <li>Parties of 8+ require 48 hours notice</li>
+            <li>No live familiars inside the dining room. The courtyard is available.</li>
+            <li>No spellcasting at the bar. The stools are still burned from the last time.</li>
+            <li>10% surcharge on public holidays</li>
+            <li>Adventuring parties of four are seated faster. This is not a coincidence.</li>
+            <li>Please mention dietary requirements in your booking</li>
+            <li>The Innkeeper does not give directions to the dungeon. The Innkeeper has never heard of the dungeon. There is no dungeon.</li>
+            <li>The Innkeeper reserves the right to refuse service to anyone who was rude on their last visit, regardless of how long ago that was.</li>
+            <li>Pets welcome in the courtyard. Familiars welcome everywhere except Table 7. Table 7 knows why.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- right: form -->
+      <div class="form">
+        <div class="form-box" id="bookingForm">
+          <h3>The Guest Ledger</h3>
+          <p class="form-sub">Fill in your details and we'll hold your seat.</p>
+
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name, Traveller</label>
+            <input class="form-control" type="text" id="name" placeholder="e.g. Elarindë of the Western Keep" autocomplete="name" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-control" type="email" id="email" placeholder="you@somewhere.nz" autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone</label>
+              <input class="form-control" type="tel" id="phone" placeholder="(09) 555 ..." autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="date">Date</label>
+              <input class="form-control" type="date" id="date" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="time">Time</label>
+              <select class="form-control" id="time">
+                <option value="">Select...</option>
+                <option>5:00 PM</option>
+                <option>5:30 PM</option>
+                <option>6:00 PM</option>
+                <option>6:30 PM</option>
+                <option>7:00 PM</option>
+                <option>7:30 PM</option>
+                <option>8:00 PM</option>
+                <option>8:30 PM</option>
+                <option>9:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="party">Party Size</label>
+            <select class="form-control" id="party">
+              <option value="">How many adventurers?</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8+ (please call us)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="notes">Dietary needs or notes for the Innkeeper</label>
+            <textarea class="form-control" id="notes" rows="3" placeholder="Allergies, special occasions, requests..."></textarea>
+          </div>
+
+          <button class="btn btn-primary" onclick="handleSubmit()">Reserve My Table</button>
+        </div>
+
+        <!-- shown after form submits -->
+        <div class="confirm-msg" id="confirmMsg">
+          <p style="font-size:2rem; margin-bottom:10px;">🍺</p>
+          <h3>You're booked in, traveller.</h3>
+          <div class="divider">- ✦ -</div>
+          <p>The Innkeeper will send you a confirmation email shortly.<br /><em>May your road to us be short and your appetite long.</em></p>
+          <a href="index.html" class="btn btn-outline" style="margin-top:18px; display:inline-block;">Back to Home</a>
+        </div>
+      </div>
+
+    </div><!-- end booking grid -->
+
+    <div class="divider" style="margin-top:40px;">- ✦ - ✦ - ✦ -</div>
+
+  </div>
+
+  <footer>
+    <span class="footer-brand">The Gilded Flagon</span>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="booking.html">Book a Table</a></li>
+    </ul>
+    <p>14 Old Anvil Road &nbsp;|&nbsp; (09) 555 0412 &nbsp;|&nbsp; reservations@gildedflagon.nz</p>
+    <p style="margin-top:6px; font-size:0.75rem;">© The Gilded Flagon 2026 &nbsp;|&nbsp; <em>Open since before the war. Which war? Yes.</em></p>
+  </footer>
+
+  <script>
+    // highlight today's row in the hours table
+    const today = new Date().getDay();
+    document.querySelectorAll('#hoursTable tr').forEach(row => {
+      if (parseInt(row.dataset.day) === today) {
+        row.classList.add('hours-today');
+      }
+    });
+
+    // set date minimum to today so you can't pick the past
+    document.getElementById('date').min = new Date().toISOString().split('T')[0];
+
+    // form validation and confirmation
+    function handleSubmit() {
+      const name  = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const date  = document.getElementById('date').value;
+      const party = document.getElementById('party').value;
+
+      // flash red border on empty required fields
+      [['name', name], ['email', email], ['date', date], ['party', party]].forEach(([id, val]) => {
+        const el = document.getElementById(id);
+        if (!val) {
+          el.style.borderColor = '#7a1a1a';
+          setTimeout(() => el.style.borderColor = '', 2000);
+        }
+      });
+
+      if (!name || !email || !date || !party) return;
+
+      // swap form for confirmation
+      document.getElementById('bookingForm').style.display = 'none';
+      const msg = document.getElementById('confirmMsg');
+      msg.style.display = 'block';
+      msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+
+</body>
+</html>

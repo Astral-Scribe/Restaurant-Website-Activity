@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap');
+
+/* Yor font by Jo Malinis - using for special headings and dish names */
+@font-face {
+  font-family: 'Yor';
+  src: url('./assets/fonts/YorT3-10-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Yor';
+  src: url('./assets/fonts/YorT3-10-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Yor';
+  src: url('./assets/fonts/YorT3-10-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Yor';
+  src: url('./assets/fonts/YorT3-10-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* --- base --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1c1008;
+  color: #e8d5a3;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: #c9a84c;
+  text-decoration: none;
+}
+a:hover {
+  color: #f0d080;
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  color: #c9a84c;
+}
+
+/* dish names specifically use Yor */
+.dish-name {
+  font-family: 'Yor', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #f0d080;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* lore quotes in Yor italic */
+.lore {
+  font-family: 'Yor', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.88rem;
+  color: #8b7040;
+  margin-bottom: 6px;
+  display: block;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/*navigation */
+nav {
+  background-color: #100800;
+  border-bottom: 2px solid #5a3e10;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-brand {
+  font-family: 'Yor', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #c9a84c;
+  letter-spacing: 0.05em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  color: #c8b89a;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #f0d080;
+  text-decoration: underline;
+}
+
+.nav-logo {
+  width: 80px;
+  height: auto;
+  margin-right: 12px;
+}
+/* --- main ---*/
+.main {
+  background-color: #0d0600;
+  border-bottom: 2px solid #5a3e10;
+  padding: 60px 30px 50px;
+  text-align: center;
+}
+
+.main h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: #c9a84c;
+  margin-bottom: 10px;
+}
+
+.main .tagline {
+  font-family: 'Yor', Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #8b7040;
+  margin-bottom: 25px;
+}
+
+.main p {
+  max-width: 580px;
+  margin: 0 auto 25px;
+  color: #c8b89a;
+  font-size: 0.95rem;
+}
+.main-image {
+  margin: 0 auto;
+  width: 90%;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+/* --- buttons --- */
+.btn {
+  display: inline-block;
+  padding: 9px 22px;
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #7a1a1a;
+  color: #f0d080;
+  border: 1px solid #a02020;
+}
+.btn-primary:hover {
+  background-color: #951f1f;
+  text-decoration: none;
+  color: #f0d080;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #c9a84c;
+  border: 1px solid #5a3e10;
+}
+.btn-outline:hover {
+  background-color: #2a1500;
+  text-decoration: none;
+  color: #f0d080;
+}
+
+/* --- divider --- */
+.divider {
+  text-align: center;
+  color: #5a3e10;
+  margin: 30px 0;
+  font-size: 18px;
+  letter-spacing: 8px;
+}
+
+/* --- section wrapper --- */
+.section {
+  padding: 40px 30px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #c9a84c;
+}
+
+.section-sub {
+  font-style: italic;
+  color: #8b7040;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+/* --- dish cards --- */
+
+.dish-card {
+  background-color: #231000;
+  border: 1px solid #5a3e10;
+  padding: 16px;
+  border-radius: 3px;
+  transition: border-color 0.2s;
+}
+
+.dish-card:hover {
+  border-color: #c9a84c;
+}
+
+.dish-card .desc {
+  font-size: 0.88rem;
+  color: #c8b89a;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.dish-card .price {
+  font-family: 'Yor', Georgia, serif;
+  font-weight: 500;
+  color: #c9a84c;
+  font-size: 1rem;
+}
+
+/* --- about grid --- */
+.about-grid {
+  display: flex;
+  gap: 35px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.about-grid .text { flex: 1; min-width: 280px; }
+.about-grid .image { flex: 1; min-width: 260px; }
+
+.about-grid .image .img-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  font-size: 2.5rem;
+  color: #3a2808;
+}
+/* --- grid layouts --- */
+
+.grid-3 {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.grid-3 .dish-card {
+  flex: 1;
+  min-width: 240px;
+}
+
+.grid-2 {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.grid-2 .dish-card {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* --- menu page specific --- */
+.menu-category {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  color: #7a1a1a;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #3a1a00;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  display: inline-block;
+  font-family: Georgia, serif;
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  border-radius: 2px;
+  margin-right: 4px;
+  margin-bottom: 6px;
+  border: 1px solid;
+}
+.tag-gf { color: #7bc87b; border-color: #3a6b3a; }
+.tag-v  { color: #7bbcc8; border-color: #3a6070; }
+.tag-vg { color: #a3c87b; border-color: #506b3a; }
+
+/* --- booking page specific --- */
+.booking-grid {
+  display: flex;
+  gap: 35px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.booking-grid .info { flex: 1; min-width: 240px; }
+.booking-grid .form { flex: 1.4; min-width: 300px; }
+
+.info-item {
+  margin-bottom: 16px;
+  font-size: 0.92rem;
+  color: #c8b89a;
+  line-height: 1.5;
+}
+.info-item strong {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8b7040;
+  margin-bottom: 2px;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  margin-top: 6px;
+}
+.hours-table td {
+  padding: 4px 0;
+  color: #c8b89a;
+  border-bottom: 1px solid #2a1800;
+}
+.hours-table td:first-child {
+  color: #8b7040;
+  width: 45%;
+}
+.hours-today td { color: #c9a84c !important; }
+
+/* form styles */
+.form-box {
+  background-color: #180c00;
+  border: 1px solid #5a3e10;
+  border-radius: 3px;
+  padding: 25px;
+}
+
+.form-box h3 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+.form-box .form-sub {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #8b7040;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+  color: #8b7040;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.form-control {
+  width: 100%;
+  background-color: #0d0600;
+  border: 1px solid #3a2800;
+  border-radius: 2px;
+  color: #e8d5a3;
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  padding: 8px 10px;
+  outline: none;
+}
+.form-control:focus {
+  border-color: #c9a84c;
+}
+.form-control::placeholder {
+  color: #4a3520;
+  font-style: italic;
+}
+select.form-control option {
+  background: #1c1008;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+.form-row .form-group { flex: 1; }
+
+.form-box .btn {
+  width: 100%;
+  text-align: center;
+  padding: 11px;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+/* confirm message */
+.confirm-msg {
+  display: none;
+  text-align: center;
+  padding: 30px;
+  background-color: #180c00;
+  border: 1px solid #5a3e10;
+  border-radius: 3px;
+}
+.confirm-msg h3 { margin-bottom: 10px; }
+.confirm-msg p { color: #c8b89a; font-style: italic; font-size: 0.95rem; }
+
+
+/* --- footer --- */
+footer {
+  background-color: #0d0600;
+  border-top: 2px solid #3a2000;
+  padding: 25px 30px;
+  text-align: center;
+  margin-top: 50px;
+  color: #5a3e10;
+  font-size: 0.85rem;
+}
+
+footer .footer-brand {
+  font-family: 'Yor', Georgia, serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #8b7040;
+  display: block;
+  margin-bottom: 6px;
+}
+
+footer .footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+footer .footer-links a {
+  color: #5a3e10;
+  font-size: 0.85rem;
+}
+footer .footer-links a:hover { color: #c9a84c; }
