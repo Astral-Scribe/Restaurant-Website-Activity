@@ -130,6 +130,11 @@ nav {
   height: auto;
   margin-right: 12px;
 }
+nav a.nav-home {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
 /* --- main ---*/
 .main {
   background-color: #0d0600;
