@@ -10,10 +10,8 @@
 <body>
   <audio src="assets/Candle Irony.mp3" autoplay loop></audio>
   <nav>
-    <a href="index.html" class="nav-home">
-      <img src="./assets/images/plainlogo.png" alt="The Gilded Flagon logo" class="nav-logo" />
-      <span class="nav-brand">The Gilded Flagon</span>
-    </a>
+    <img src="./assets/images/plainlogo.png" alt="The Gilded Flagon logo" class="nav-logo" />
+    <span class="nav-brand"> The Gilded Flagon</span>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="menu.html" class="active">Menu</a></li>
@@ -24,7 +22,7 @@
 
     <!-- page title -->
     <div style="text-align:center; margin-bottom:30px;">
-      <h1 style="font-size:2rem; margin-bottom:6px;">Bill of Fare</h1>
+      <h1 style="font-size:3rem; margin-bottom:6px;">Bill of Fare</h1>
       <p style="font-style:italic; color:#8b7040; font-size:0.9rem; margin:0;">
         All dishes prepared fresh each eve by our kitchen guild.
       </p>
@@ -45,26 +43,27 @@
       <div class="grid-2">
         <div class="dish-card">
           <img src="./assets/images/bone marrow.png" alt="Bone of the Fallen Paladin"/>
-          <span class="tag tag-gf">GF</span>
+          <div class="tag-row"><span class="tag tag-gf">GF</span></div>
           <span class="dish-name">Bone of the Fallen Paladin</span>
-          <span class="lore">"He died heroically. He would have wanted this."</span>
+          <span class="lore">"Found on the battlefield. Brought to the kitchen."</span>
           <p class="desc">Roasted beef marrow bones, herb gremolata, pickled shallots, grilled sourdough.</p>
           <span class="price">$18</span>
         </div>
 
         <div class="dish-card">
           <img src="./assets/images/butternut soup.png" alt="The Witch's Soup"/>
-          <span class="tag tag-v">V</span><span class="tag tag-gf">GF</span>
+          <div class="tag-row"><span class="tag tag-v">V</span><span class="tag tag-gf">GF</span></div>
           <span class="dish-name">The Witch's Soup</span>
-          <span class="lore">"She said it would keep you warm through any winter. She also said a lot of other things. We only put this one on the menu."</span>
+          <span class="lore">"Brewed by moonlight. Stirred three times widdershins."</span>
           <p class="desc">Roasted butternut and black garlic velouté, crème fraîche, toasted pepitas, smoked paprika oil.</p>
           <span class="price">$14</span>
         </div>
 
         <div class="dish-card">
           <img src="./assets/images/chicken wings.png" alt="Goblin Fire Wings"/>
+          <div class="tag-row"></div>
           <span class="dish-name">Goblin Fire Wings</span>
-          <span class="lore">"Technically a diplomatic incident. Delicious anyway."</span>
+          <span class="lore">"Stolen from their camp. Worth the risk."</span>
           <p class="desc">Six crispy chicken wings in a fermented chilli and mead glaze, blue cheese dip, pickled celery.</p>
           <span class="price">$19</span>
         </div>
@@ -82,27 +81,27 @@
 
         <div class="dish-card">
           <img src="./assets/images/braised-short-ribs.png" alt="Dragon's Marrow Roast"/>
-          <span class="tag tag-gf">GF</span>
+          <div class="tag-row"><span class="tag tag-gf">GF</span></div>
           <span class="dish-name">Dragon's Marrow Roast</span>
-          <span class="lore">"Twelve hours in the fire. Worth every one of them. A paladin once wept at the table. We did not ask why."</span>
+          <span class="lore">"Said to grant the strength of a dragon. Unverified."</span>
           <p class="desc">Slow-roasted beef short rib, smoked bone marrow butter, ember-charred broccolini, carrot purée, crimson wine jus.</p>
           <span class="price">$46</span>
         </div>
 
         <div class="dish-card">
           <img src="./assets/images/salmon.png" alt="Mead-Glazed Salmon"/>
-          <span class="tag tag-gf">GF</span>
+          <div class="tag-row"><span class="tag tag-gf">GF</span></div>
           <span class="dish-name">Mead-Glazed Salmon</span>
-          <span class="lore">"Pulled from cold water by hands that knew what they were doing. The glaze is the Innkeeper's own. Do not ask for the recipe. You will not receive it."</span>
+          <span class="lore">"Fresh from the elemental plane of Water."</span>
           <p class="desc">Pan-seared Atlantic salmon, honey-mead glaze, roasted root mash, wilted spinach, dill crème.</p>
           <span class="price">$38</span>
         </div>
 
         <div class="dish-card">
           <img src="./assets/images/risotto.png" alt="Elven Forest Risotto"/>
-          <span class="tag tag-v">V</span>
+          <div class="tag-row"><span class="tag tag-v">V</span></div>
           <span class="dish-name">Elven Forest Risotto</span>
-          <span class="lore">"The recipe was bartered for in the Silverwood, circa Age 380. The elves still maintain we got the better deal. They are correct."</span>
+          <span class="lore">"An ancient recipe. The elves were reluctant to share it."</span>
           <p class="desc">Wild mushroom medley, arborio rice in herb broth, white truffle oil, shaved parmesan, pine nuts.</p>
           <span class="price">$32</span>
         </div>
@@ -116,37 +115,40 @@
     <div class="menu-category" id="drinks">
       <div class="category-title">Elixirs & Brews</div>
 
-      <div class="grid-2">
+      <div class="grid-4">
 
         <div class="dish-card">
           <img src="./assets/images/mead.png" alt="The Innkeeper's Mead"/>
+          <div class="tag-row"></div>
           <span class="dish-name">The Innkeeper's Mead</span>
-          <span class="lore">"Brewed in the cellar beneath the cellar. What's beneath that? The Innkeeper smiles and changes the subject."</span>
+          <span class="lore">"House recipe. Not for sale. On the menu anyway."</span>
           <p class="desc">Honey mead brewed in-house, lightly sparkling, served cold with a curl of orange peel.</p>
           <span class="price">$12 / $18 pint</span>
         </div>
 
         <div class="dish-card">
           <img src="./assets/images/redcocktail.png" alt="Potion of the Red Dragon"/>
+          <div class="tag-row"></div>
           <span class="dish-name">Potion of the Red Dragon</span>
-          <span class="lore">"Three adventurers ordered this on the same night in Age 408. Two of them are still here. The third left very quickly and has not returned."</span>
+          <span class="lore">"Approach with caution. Do not mix with other potions."</span>
           <p class="desc">Spiced rum, blood orange, ginger beer, chilli tincture, smoke-dried lime. One large ice cube.</p>
           <span class="price">$16</span>
         </div>
 
         <div class="dish-card">
           <img src="./assets/images/bluecocktail.png" alt="The Wizard's Brew"/>
+          <div class="tag-row"></div>
           <span class="dish-name">The Wizard's Brew</span>
-          <span class="lore">"It changes colour. The wizard who invented it called this a 'minor enchantment.' We call it a conversation starter."</span>
+          <span class="lore">"Blue. Effervescent. Mildly enchanted."</span>
           <p class="desc">Blue butterfly pea gin, elderflower, lemon, prosecco. Changes colour when you add the lemon.</p>
           <span class="price">$17</span>
         </div>
 
         <div class="dish-card">
           <img src="./assets/images/healerstonic.png" alt="Healer's Tonic"/>
-          <span class="tag tag-vg">VG</span>
+          <div class="tag-row"><span class="tag tag-vg">VG</span></div>
           <span class="dish-name">Healer's Tonic</span>
-          <span class="lore">"Recommended after a long road, a hard battle, or a family dinner. No judgment. The Innkeeper has seen everything."</span>
+          <span class="lore">"No alcohol. No judgment. Plenty of healing."</span>
           <p class="desc">Fresh ginger, turmeric, lemon, raw honey, sparkling water. Served in a clay goblet.</p>
           <span class="price">$8</span>
         </div>
@@ -167,6 +169,7 @@
 
         <div class="dish-card">
           <img src="assets/images/sticky date pudding.png" alt="Fireside Sticky Pudding"/>
+          <div class="tag-row"></div>
           <span class="dish-name">Fireside Sticky Pudding</span>
           <span class="lore">"Warm. Dense. The kind of thing that ends quests."</span>
           <p class="desc">Sticky date pudding, warm toffee sauce, vanilla ice cream, candied walnut.</p>
@@ -175,7 +178,7 @@
 
         <div class="dish-card">
           <img src="assets/images/chocolate cake.png" alt="Midnight Chocolate Tart"/>
-          <span class="tag tag-gf">GF</span>
+          <div class="tag-row"><span class="tag tag-gf">GF</span></div>
           <span class="dish-name">Midnight Chocolate Tart</span>
           <span class="lore">"Dark as the road at midnight."</span>
           <p class="desc">Dark chocolate ganache tart, salted caramel base, gold dust, freeze-dried raspberry.</p>
@@ -193,7 +196,7 @@
       <li><a href="booking.html">Book a Table</a></li>
     </ul>
     <p>14 Old Anvil Road &nbsp;|&nbsp; (09) 555 0412 &nbsp;|&nbsp; reservations@gildedflagon.nz</p>
-    <p style="margin-top:6px; font-size:0.75rem;">© The Gilded Flagon 2026 &nbsp;|&nbsp; <em>Open since before the war. Which war? Yes.</em></p>
+    <p style="margin-top:6px; font-size:0.75rem;">© The Gilded Flagon 2026</p>
   </footer>
 </body>
 </html>

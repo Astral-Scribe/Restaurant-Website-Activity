@@ -261,6 +261,25 @@ nav a.nav-home {
   font-size: 1rem;
 }
 
+.dish-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background-color: #231000;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 8px;
+  min-height: 240px;
+} 
+
+.dish-name {
+  margin-top: 8px;
+}
+.tag-row {
+  min-height: 24px;
+  margin-bottom: 4px;
+}
+
 /* --- about grid --- */
 .about-grid {
   display: flex;
@@ -284,6 +303,7 @@ nav a.nav-home {
   gap: 16px;
   flex-wrap: wrap;
 }
+
 .grid-3 .dish-card {
   flex: 1;
   min-width: 240px;
@@ -298,7 +318,15 @@ nav a.nav-home {
   flex: 1;
   min-width: 280px;
 }
-
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.grid-4 .dish-card {
+  flex: 1;
+  min-width: 280px;
+}
 /* --- menu page specific --- */
 .menu-category {
   margin-bottom: 40px;
