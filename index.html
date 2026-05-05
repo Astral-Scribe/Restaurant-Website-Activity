@@ -162,6 +162,10 @@
       started = true;
       }
     });
+    window.onload = function() {
+    document.getElementById('bgMusic').play();
+    started= true;
+    };
     var muted = false;
     function toggleMusic() {
       var music = document.getElementById('bgMusic');

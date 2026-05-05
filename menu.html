@@ -201,7 +201,7 @@
 
       </div>
     </div>
-
+  </div>
   <footer>
     <span class="footer-brand">The Gilded Flagon</span>
     <ul class="footer-links">
@@ -221,6 +221,10 @@
       started = true;
       }
     });
+    window.onload = function() {
+    document.getElementById('bgMusic').play();
+    started= true;
+    };
     var muted = false;
     function toggleMusic() {
       var music = document.getElementById('bgMusic');
