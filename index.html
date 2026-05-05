@@ -8,7 +8,20 @@
   <link rel="icon" href="./assets/images/plainlogo.png">
 </head>
 <body>
-  <audio src="assets/Candle Irony.mp3" autoplay loop></audio>
+  <!-- audio plays by default, mute button controls it -->
+  <audio id="bgMusic" src="assets/Candle Irony.mp3" loop></audio>
+
+  <!-- music widget - fixed bottom right -->
+  <div class="music-widget">
+    <span>Music</span>
+    <button class="music-btn" onclick="toggleMusic()" id="musicBtn" title="Mute/Unmute">
+      <!-- replace these with your generated icon images -->
+      <img id="musicIcon" src="./assets/images/icon-unmuted.jpg" alt="Mute music" />
+    </button>
+  </div>
+
+  
+
   <nav>
     <a href="index.html" class="nav-home">
       <img src="./assets/images/plainlogo.png" alt="The Gilded Flagon logo" class="nav-logo" />
@@ -21,7 +34,18 @@
     </ul>
   </nav>
   <div class="main">
-    <img src="./assets/images/tavern.jpg" alt="Interior of The Gilded Flagon" class="main-image" />
+    <!-- image carousel -->
+  <div class="carousel">
+    <div class="carousel-track" id="carouselTrack">
+      <img src="./assets/images/tavern.jpg" alt="Inside the Gilded Flagon" />
+      <img src="./assets/images/braised-short-ribs.png" alt="Dragon's Marrow Roast" />
+      <img src="./assets/images/cocktails.png" alt="Drinks"/>
+      <img src="./assets/images/tavernexterior.png" alt="The Gilded Flagon exterior" />
+    </div>
+    <button class="carousel-btn prev" onclick="slide(-1)">&#8592;</button>
+    <button class="carousel-btn next" onclick="slide(1)">&#8594;</button>
+  </div>
+  <div class="carousel-dots" id="carouselDots"></div>
     <br>
     <h1>⚔ The Gilded Flagon ⚔</h1>
     <p class="tagline">"Where the road ends and the fire begins."</p>
@@ -99,5 +123,56 @@
     <p>14 Old Anvil Road &nbsp;|&nbsp; (09) 555 0412 &nbsp;|&nbsp; reservations@gildedflagon.nz</p>
     <p style="margin-top:6px; font-size:0.75rem;">© The Gilded Flagon 2026 &nbsp;|&nbsp; <em>Open since before the war. Which war? Yes.</em></p>
   </footer>
+  <script>
+    // carousel
+    var current = 0;
+    var track = document.getElementById('carouselTrack');
+    var slides = track.children;
+    var dotsEl = document.getElementById('carouselDots');
+
+    // build dots
+    for (var i = 0; i < slides.length; i++) {
+      var dot = document.createElement('span');
+      if (i === 0) dot.classList.add('on');
+      dot.setAttribute('data-index', i);
+      dot.onclick = function() { goTo(parseInt(this.getAttribute('data-index'))); };
+      dotsEl.appendChild(dot);
+    }
+
+    function goTo(n) {
+      current = (n + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      var dots = document.querySelectorAll('.carousel-dots span');
+      for (var i = 0; i < dots.length; i++) {
+        dots[i].classList.remove('on');
+      }
+      dots[current].classList.add('on');
+    }
+
+    function slide(dir) { goTo(current + dir); }
+
+    // auto advance every 5 seconds
+    setInterval(function() { slide(1); }, 5000);
+
+    // music toggle
+    window.onload = function() {
+    document.getElementById('bgMusic').play();
+    }
+    var muted = false;
+    function toggleMusic() {
+      var music = document.getElementById('bgMusic');
+      var icon  = document.getElementById('musicIcon');
+      if (muted) {
+        music.play();
+        icon.src = './assets/images/icon-unmuted.jpg';
+        icon.alt = 'Mute music';
+        muted = false;
+      } else {
+        music.pause();
+        icon.src = './assets/images/icon-muted.png';
+        icon.alt = 'Unmute music';
+        muted = true;
+      }
+    }
+  </script>
 </body>
-</html>

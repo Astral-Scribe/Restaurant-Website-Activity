@@ -8,7 +8,15 @@
   <link rel="icon" href="./assets/images/plainlogo.png">
 </head>
 <body>
-  <audio src="assets/Candle Irony.mp3" autoplay loop></audio>
+  <audio id="bgMusic" src="assets/Candle Irony.mp3" loop></audio>
+
+  <div class="music-widget">
+    <span>Music</span>
+    <button class="music-btn" onclick="toggleMusic()" id="musicBtn" title="Mute/Unmute">
+      <img id="musicIcon" src="./assets/images/icon-unmuted.jpg" alt="Mute music" />
+    </button>
+  </div>
+
   <nav>
     <a href="index.html" class="nav-home">
       <img src="./assets/images/plainlogo.png" alt="The Gilded Flagon logo" class="nav-logo" />
@@ -213,6 +221,27 @@
       const msg = document.getElementById('confirmMsg');
       msg.style.display = 'block';
       msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // music toggle
+    window.onload = function() {
+    document.getElementById('bgMusic').play();
+    }
+    var muted = false;
+    function toggleMusic() {
+      var music = document.getElementById('bgMusic');
+      var icon  = document.getElementById('musicIcon');
+      if (muted) {
+        music.play();
+        icon.src = './assets/images/icon-unmuted.jpg';
+        icon.alt = 'Mute music';
+        muted = false;
+      } else {
+        music.pause();
+        icon.src = './assets/images/icon-muted.png';
+        icon.alt = 'Unmute music';
+        muted = true;
+      }
     }
   </script>
 

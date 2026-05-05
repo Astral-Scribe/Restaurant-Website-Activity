@@ -8,16 +8,30 @@
   <link rel="icon" href="./assets/images/plainlogo.png">
 </head>
 <body>
-  <audio src="assets/Candle Irony.mp3" autoplay loop></audio>
+  <audio id="bgMusic" src="assets/Candle Irony.mp3" loop></audio>
+
+  <div class="music-widget">
+    <span>Music</span>
+    <button class="music-btn" onclick="toggleMusic()" id="musicBtn" title="Mute/Unmute">
+      <img id="musicIcon" src="./assets/images/icon-unmuted.jpg" alt="Mute music" />
+    </button>
+  </div>
+
   <nav>
-    <img src="./assets/images/plainlogo.png" alt="The Gilded Flagon logo" class="nav-logo" />
-    <span class="nav-brand"> The Gilded Flagon</span>
+    <a href="index.html" class="nav-home">
+      <img src="./assets/images/plainlogo.png" alt="The Gilded Flagon logo" class="nav-logo" />
+      <span class="nav-brand">The Gilded Flagon</span>
+    </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="menu.html" class="active">Menu</a></li>
       <li><a href="booking.html">Book a Table</a></li>
     </ul>
   </nav>
+
+  <!-- hero image for the menu page - replace with your generated image -->
+  <img src="./assets/images/menuhero.jpg" alt="The Gilded Flagon dining hall" class="menu-hero-img" />
+
   <div class="section">
 
     <!-- page title -->
@@ -198,5 +212,27 @@
     <p>14 Old Anvil Road &nbsp;|&nbsp; (09) 555 0412 &nbsp;|&nbsp; reservations@gildedflagon.nz</p>
     <p style="margin-top:6px; font-size:0.75rem;">© The Gilded Flagon 2026</p>
   </footer>
+
+  <script>
+    window.onload = function() {
+    document.getElementById('bgMusic').play();
+    }
+    var muted = false;
+    function toggleMusic() {
+      var music = document.getElementById('bgMusic');
+      var icon  = document.getElementById('musicIcon');
+      if (muted) {
+        music.play();
+        icon.src = './assets/images/icon-unmuted.jpg';
+        icon.alt = 'Mute music';
+        muted = false;
+      } else {
+        music.pause();
+        icon.src = './assets/images/icon-muted.png';
+        icon.alt = 'Unmute music';
+        muted = true;
+      }
+    }
+  </script>
 </body>
 </html>
