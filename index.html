@@ -155,9 +155,13 @@
     setInterval(function() { slide(1); }, 5000);
 
     // music toggle
-    window.onload = function() {
-    document.getElementById('bgMusic').play();
-    }
+    var started = false;
+    document.addEventListener('click', function() {
+    if (!started) {
+      document.getElementById('bgMusic').play();
+      started = true;
+      }
+    });
     var muted = false;
     function toggleMusic() {
       var music = document.getElementById('bgMusic');
